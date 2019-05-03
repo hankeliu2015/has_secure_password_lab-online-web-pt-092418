@@ -1,11 +1,9 @@
 <h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<p>Session new Page for user to login</p>
 
-<%= form_for(@user) do |f| %>
-<%= f.label  :name %><br>
-<%= f.text_field  :name %><br>
-<%= f.label  :password %><br>
-<%= f.password_field :password %><br>
-<%= f.submit 'Login' %>
+<%= form_tag({controller: 'sessions', action: 'create', method: 'post'}) do %>
+User Name: <input name=name ><br>
+Password: <input type=password password=password><br>
+<input type=submit value='Login' >
 
 <% end %>
